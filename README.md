@@ -42,7 +42,3 @@ Then open http://127.0.0.1:5000
 ## Tech stack
 
 Python · Flask · scikit-learn · NumPy · HTML/CSS
-
-## Author
-
-**Sabrina Chavez** · B.S. Computer Science (Data Science and Analytics), Mapúa Malayan Colleges Laguna
