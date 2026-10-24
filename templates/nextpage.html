@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #1a0b2e;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        .header-section {
+            padding: 80px 20px 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            color: #ccc;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .results-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .result-card {
+            background: #2d1b4d;
+            color: white;
+            padding: 45px;
+            border-radius: 4px;
+            border: 1px solid #3d2b5d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+            .result-card:hover {
+                transform: translateY(-5px);
+                border-color: #7e4dbb;
+            }
+
+            .result-card h4 {
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #7e4dbb;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .result-card .personality-type {
+                font-family: 'Playfair Display', serif;
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+                background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .result-card .desc {
+                font-weight: 300;
+                font-size: 1.2rem;
+                line-height: 1.6;
+                color: #ddd;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+        .btn-custom {
+            display: inline-block;
+            padding: 12px 35px;
+            border-radius: 4px;
+            border: none;
+            background: linear-gradient(135deg, #4b55be 0%, #7e4dbb 100%);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            margin: 10px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            .btn-custom:hover {
+                transform: scale(1.05);
+                color: white;
+                box-shadow: 0 10px 20px rgba(126, 77, 187, 0.4);
+                text-decoration: none;
+            }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #7e4dbb;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.5;
+            margin-top: 40px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h2>Your Personality Profile</h2>
+            <p>BASED ON YOUR SOCIAL & DAILY HABITS</p>
+        </div>
+
+        <div class="results-container">
+            <div class="result-card">
+                <h4>Primary Type</h4>
+                <div class="personality-type">{{ result }}</div>
+
+                <div class="desc">
+                    {{ description }}
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="/" class="btn-custom btn-outline">Back Home</a>
+            <a href="/test" class="btn-custom">Retake Quiz</a>
+        </div>
+    </div>
+</body>
+</html>
